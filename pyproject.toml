@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-matrix-multiplication"
+version = "0.1.0"
+description = "Reconstructed structured matrix-vector multiplication over GF(2^8)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["dynamic_matrix*"]

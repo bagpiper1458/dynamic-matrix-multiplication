@@ -1,0 +1,2 @@
+compiler=Clang 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)
+seed=20261007 repeats=7 iterations=100 scalar_modulus=0x11B units=median_ms counters=disabled

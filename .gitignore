@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.tools/
+.zig-cache/
+build/
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.egg-info/
+dist/
+benchmarks/local*
