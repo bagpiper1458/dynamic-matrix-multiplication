@@ -1,0 +1,139 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "method": "tracemalloc; fresh phase per measurement; existing inputs and prepared plan excluded from apply phase; not RSS; tracing disabled in separate timing runs",
+  "rows": [
+    {
+      "n": 0,
+      "N": 1,
+      "plan_retained_bytes": 624,
+      "prepare_peak_bytes": 902,
+      "apply_peak_extra_bytes": 142,
+      "apply_result_retained_bytes": 48,
+      "end_to_end_peak_bytes": 920,
+      "baseline_peak_extra_bytes": 1792,
+      "node_count": 1,
+      "recursion_depth": 1
+    },
+    {
+      "n": 1,
+      "N": 2,
+      "plan_retained_bytes": 1496,
+      "prepare_peak_bytes": 2518,
+      "apply_peak_extra_bytes": 1256,
+      "apply_result_retained_bytes": 56,
+      "end_to_end_peak_bytes": 3056,
+      "baseline_peak_extra_bytes": 1808,
+      "node_count": 4,
+      "recursion_depth": 2
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "plan_retained_bytes": 2760,
+      "prepare_peak_bytes": 4598,
+      "apply_peak_extra_bytes": 1952,
+      "apply_result_retained_bytes": 72,
+      "end_to_end_peak_bytes": 5048,
+      "baseline_peak_extra_bytes": 1840,
+      "node_count": 13,
+      "recursion_depth": 3
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "plan_retained_bytes": 4936,
+      "prepare_peak_bytes": 9296,
+      "apply_peak_extra_bytes": 3744,
+      "apply_result_retained_bytes": 104,
+      "end_to_end_peak_bytes": 12248,
+      "baseline_peak_extra_bytes": 1904,
+      "node_count": 40,
+      "recursion_depth": 4
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "plan_retained_bytes": 14416,
+      "prepare_peak_bytes": 25560,
+      "apply_peak_extra_bytes": 8640,
+      "apply_result_retained_bytes": 168,
+      "end_to_end_peak_bytes": 32936,
+      "baseline_peak_extra_bytes": 2152,
+      "node_count": 121,
+      "recursion_depth": 5
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "plan_retained_bytes": 42944,
+      "prepare_peak_bytes": 73824,
+      "apply_peak_extra_bytes": 22888,
+      "apply_result_retained_bytes": 296,
+      "end_to_end_peak_bytes": 93240,
+      "baseline_peak_extra_bytes": 2552,
+      "node_count": 364,
+      "recursion_depth": 6
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "plan_retained_bytes": 128464,
+      "prepare_peak_bytes": 217320,
+      "apply_peak_extra_bytes": 64696,
+      "apply_result_retained_bytes": 552,
+      "end_to_end_peak_bytes": 274616,
+      "baseline_peak_extra_bytes": 3248,
+      "node_count": 1093,
+      "recursion_depth": 7
+    },
+    {
+      "n": 7,
+      "N": 128,
+      "plan_retained_bytes": 385056,
+      "prepare_peak_bytes": 564752,
+      "apply_peak_extra_bytes": 176256,
+      "apply_result_retained_bytes": 1064,
+      "end_to_end_peak_bytes": 630088,
+      "baseline_peak_extra_bytes": 4792,
+      "node_count": 3280,
+      "recursion_depth": 8
+    },
+    {
+      "n": 8,
+      "N": 256,
+      "plan_retained_bytes": 1154856,
+      "prepare_peak_bytes": 1485752,
+      "apply_peak_extra_bytes": 314240,
+      "apply_result_retained_bytes": 2088,
+      "end_to_end_peak_bytes": 1674392,
+      "baseline_peak_extra_bytes": 8208,
+      "node_count": 9841,
+      "recursion_depth": 9
+    },
+    {
+      "n": 9,
+      "N": 512,
+      "plan_retained_bytes": 3464368,
+      "prepare_peak_bytes": 4076412,
+      "apply_peak_extra_bytes": 495640,
+      "apply_result_retained_bytes": 4136,
+      "end_to_end_peak_bytes": 4416920,
+      "baseline_peak_extra_bytes": 15076,
+      "node_count": 29524,
+      "recursion_depth": 10
+    },
+    {
+      "n": 10,
+      "N": 1024,
+      "plan_retained_bytes": 10392800,
+      "prepare_peak_bytes": 11029572,
+      "apply_peak_extra_bytes": 733760,
+      "apply_result_retained_bytes": 8232,
+      "end_to_end_peak_bytes": 11550448,
+      "baseline_peak_extra_bytes": 28492,
+      "node_count": 88573,
+      "recursion_depth": 11
+    }
+  ]
+}

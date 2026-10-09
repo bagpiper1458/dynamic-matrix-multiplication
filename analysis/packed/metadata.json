@@ -1,0 +1,47 @@
+{
+  "started_utc": "2026-10-08T17:54:54.563802+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+  "compile_flags": "-std=c++17 -O3 -Wall -Wextra -Wpedantic",
+  "note": "Local run; fixed matrix per size; 16 rotating vectors; no memory profiler during timing.",
+  "source_sha256": {
+    "cpp/dynamic_matrix.hpp": "84744f3b392ab1305293e7e9b2f847466156b0b5950290586281384e6f7daab8",
+    "cpp/iterative_matrix.hpp": "8fac99fa75cf0a446f2f009dbeb6e259bd0085d1d86fc15754b4fbd228cbf571",
+    "cpp/packed_matrix.hpp": "137c2fd1a8781818e347bbf5b7fb1083bc70e5e8f24d84531fe2e381f06481aa",
+    "cpp/compare_packed.cpp": "f303cc68249c5d5228f5fdf4c72905b0df20500470caa80d11a8b2ab22d1ca7d"
+  },
+  "runs": [
+    {
+      "command": [
+        "build/dm_compare_packed.exe",
+        "10",
+        "7",
+        "32",
+        "toeplitz"
+      ],
+      "stderr": "compiler=Clang 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)\nseed=20261009 repeats=7 iterations=32 vectors_per_size=16 units=ms_per_call counters=disabled field_kernel=gf_mul_0x11B\n"
+    },
+    {
+      "command": [
+        "build/dm_compare_packed.exe",
+        "10",
+        "7",
+        "32",
+        "circulant"
+      ],
+      "stderr": "compiler=Clang 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)\nseed=20261009 repeats=7 iterations=32 vectors_per_size=16 units=ms_per_call counters=disabled field_kernel=gf_mul_0x11B\n"
+    },
+    {
+      "command": [
+        "build/dm_compare_packed.exe",
+        "10",
+        "7",
+        "32",
+        "unit-circulant"
+      ],
+      "stderr": "compiler=Clang 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)\nseed=20261009 repeats=7 iterations=32 vectors_per_size=16 units=ms_per_call counters=disabled field_kernel=gf_mul_0x11B\n"
+    }
+  ],
+  "finished_utc": "2026-10-08T17:55:15.408472+00:00",
+  "path_note": "Executable paths made repository-relative for publication; samples, arguments and source hashes are unchanged."
+}

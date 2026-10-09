@@ -2,9 +2,9 @@
 
 ## Source
 
-Reconstructed from the author-provided LaTeX manuscript titled *Improve Computing Efficiency of 2ⁿ × 2ⁿ Toeplitz Matrix and Circulant Matrix Multiplication over Galois Fields by Dynamic Multiplication*. The original C++ and Python sources are unavailable. The manuscript provides an eight-step scalar multiplication example in C, block identities, operation-count derivations, pseudocode, and historic timing tables. Its bibliography file, figures, compiler settings, benchmark source, and exact hardware configuration were not supplied.
+Implemented from the author-provided LaTeX manuscript titled *Improve Computing Efficiency of 2ⁿ × 2ⁿ Toeplitz Matrix and Circulant Matrix Multiplication over Galois Fields by Dynamic Multiplication*. Initially the original sources were unavailable. The author subsequently recovered two closely related C++ formula-generation/validation programs and clarified that PARAMS reuse had only existed as pseudocode. Those programs do not deduplicate the N² product occurrences. The manuscript provides an eight-step scalar multiplication example in C, block identities, operation-count derivations, pseudocode, and historic timing tables. Its bibliography file, figures, compiler settings, benchmark source, and exact hardware configuration were not supplied.
 
-The new implementations follow the recursive identity from the proof directly. They do not claim to reproduce the original `PARAMS` table layout, generated symbolic expressions, memory representation, or performance environment. This distinction should remain visible when presenting the repository as a portfolio project.
+The new implementations follow the block identities and general formula. The [PARAMS derivation](params-derivation.zh-TW.md) defines a concrete interpretation of symbolic keys, block values, preprocessing, and lifetimes. It is new implementation work based on the manuscript and recovered formula code, not recovery of a previously implemented PARAMS optimizer or its performance environment.
 
 ## Decisions and discrepancies
 
@@ -13,7 +13,7 @@ The new implementations follow the recursive identity from the proof directly. T
 3. **Addition counts:** the manuscript's 2 × 2 derivation counts the vector addition and two result additions, but omits coefficient additions such as a0 XOR a1. Interpret its A count as evaluation with prepared matrix coefficients. Record preparation separately.
 4. **Evaluation table:** the table described nearby as the non-unit case lists M=1,5,19,65,...; these equal 3ⁿ−2ⁿ, the unit-row-sum case. Run and label both variants explicitly instead of copying that label.
 5. **Introduction typo:** a paragraph repeats 3ⁿ for the unit case, whereas the abstract and later derivation give 3ⁿ−2ⁿ. The executable operation-count tests follow the latter formula and the block proof.
-6. **Symbolic algorithms:** the supplied pseudocode does not completely specify initialization or storage behavior. Implement the unambiguous recursive block identity and document the difference rather than infer lost code details.
+6. **Symbolic algorithms:** the supplied pseudocode does not completely specify initialization or storage behavior. The derived PARAMS specification explicitly chooses aligned dyadic blocks with row-wise partial-sum vectors and symbolic structural keys. Its choices and finite-size symbolic checks are documented; this is not claimed to be a uniquely specified original storage layout.
 7. **Timing claims:** original times and percentage improvements are historical manuscript claims, not current measurements. New benchmark outputs include their own metadata. Arithmetic savings do not imply the time-efficiency limit or security claims mentioned in the manuscript.
 
 ## Portfolio description

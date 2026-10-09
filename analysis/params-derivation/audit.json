@@ -1,0 +1,1058 @@
+{
+  "description": "Finite-size symbolic and numeric checks of derived PARAMS semantics; not a speed/memory benchmark.",
+  "sizes": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "cases": [
+    {
+      "exponent": 0,
+      "N": 1,
+      "kind": "toeplitz",
+      "formula_product_occurrences": 1,
+      "unique_products": 1,
+      "unique_vector_forms": 1,
+      "unique_coefficient_forms": 1,
+      "vector_xors": 0,
+      "output_xors": 0,
+      "field_multiplies": 1,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 1,
+          "new_output_xors": 0
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 0,
+      "N": 1,
+      "kind": "circulant",
+      "formula_product_occurrences": 1,
+      "unique_products": 1,
+      "unique_vector_forms": 1,
+      "unique_coefficient_forms": 1,
+      "vector_xors": 0,
+      "output_xors": 0,
+      "field_multiplies": 1,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 1,
+          "new_output_xors": 0
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 0,
+      "N": 1,
+      "kind": "unit-circulant",
+      "formula_product_occurrences": 1,
+      "unique_products": 1,
+      "unique_vector_forms": 1,
+      "unique_coefficient_forms": 1,
+      "vector_xors": 0,
+      "output_xors": 0,
+      "field_multiplies": 0,
+      "identity_copies": 1,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 1,
+          "new_output_xors": 0
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 1,
+      "N": 2,
+      "kind": "toeplitz",
+      "formula_product_occurrences": 4,
+      "unique_products": 3,
+      "unique_vector_forms": 3,
+      "unique_coefficient_forms": 3,
+      "vector_xors": 1,
+      "output_xors": 2,
+      "field_multiplies": 3,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 3,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 2,
+          "new_output_xors": 2
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 1,
+      "N": 2,
+      "kind": "circulant",
+      "formula_product_occurrences": 4,
+      "unique_products": 3,
+      "unique_vector_forms": 3,
+      "unique_coefficient_forms": 2,
+      "vector_xors": 1,
+      "output_xors": 2,
+      "field_multiplies": 3,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 3,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 2,
+          "new_output_xors": 2
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 1,
+      "N": 2,
+      "kind": "unit-circulant",
+      "formula_product_occurrences": 4,
+      "unique_products": 3,
+      "unique_vector_forms": 3,
+      "unique_coefficient_forms": 2,
+      "vector_xors": 1,
+      "output_xors": 2,
+      "field_multiplies": 1,
+      "identity_copies": 2,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 3,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 2,
+          "new_output_xors": 2
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 2,
+      "N": 4,
+      "kind": "toeplitz",
+      "formula_product_occurrences": 16,
+      "unique_products": 9,
+      "unique_vector_forms": 9,
+      "unique_coefficient_forms": 9,
+      "vector_xors": 5,
+      "output_xors": 10,
+      "field_multiplies": 9,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 9,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 6,
+          "new_output_xors": 6
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 4,
+          "new_output_xors": 4
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true,
+      "product_id_grid": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          2,
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "exponent": 2,
+      "N": 4,
+      "kind": "circulant",
+      "formula_product_occurrences": 16,
+      "unique_products": 9,
+      "unique_vector_forms": 9,
+      "unique_coefficient_forms": 5,
+      "vector_xors": 5,
+      "output_xors": 10,
+      "field_multiplies": 9,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 9,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 6,
+          "new_output_xors": 6
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 4,
+          "new_output_xors": 4
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true,
+      "product_id_grid": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          2,
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "exponent": 2,
+      "N": 4,
+      "kind": "unit-circulant",
+      "formula_product_occurrences": 16,
+      "unique_products": 9,
+      "unique_vector_forms": 9,
+      "unique_coefficient_forms": 5,
+      "vector_xors": 5,
+      "output_xors": 10,
+      "field_multiplies": 5,
+      "identity_copies": 4,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 9,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 6,
+          "new_output_xors": 6
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 4,
+          "new_output_xors": 4
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true,
+      "product_id_grid": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          2,
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "exponent": 3,
+      "N": 8,
+      "kind": "toeplitz",
+      "formula_product_occurrences": 64,
+      "unique_products": 27,
+      "unique_vector_forms": 27,
+      "unique_coefficient_forms": 27,
+      "vector_xors": 19,
+      "output_xors": 38,
+      "field_multiplies": 27,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 27,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 18,
+          "new_output_xors": 18
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 12,
+          "new_output_xors": 12
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 8,
+          "new_output_xors": 8
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 3,
+      "N": 8,
+      "kind": "circulant",
+      "formula_product_occurrences": 64,
+      "unique_products": 27,
+      "unique_vector_forms": 27,
+      "unique_coefficient_forms": 14,
+      "vector_xors": 19,
+      "output_xors": 38,
+      "field_multiplies": 27,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 27,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 18,
+          "new_output_xors": 18
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 12,
+          "new_output_xors": 12
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 8,
+          "new_output_xors": 8
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 3,
+      "N": 8,
+      "kind": "unit-circulant",
+      "formula_product_occurrences": 64,
+      "unique_products": 27,
+      "unique_vector_forms": 27,
+      "unique_coefficient_forms": 14,
+      "vector_xors": 19,
+      "output_xors": 38,
+      "field_multiplies": 19,
+      "identity_copies": 8,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 27,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 18,
+          "new_output_xors": 18
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 12,
+          "new_output_xors": 12
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 8,
+          "new_output_xors": 8
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 4,
+      "N": 16,
+      "kind": "toeplitz",
+      "formula_product_occurrences": 256,
+      "unique_products": 81,
+      "unique_vector_forms": 81,
+      "unique_coefficient_forms": 81,
+      "vector_xors": 65,
+      "output_xors": 130,
+      "field_multiplies": 81,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 81,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 54,
+          "new_output_xors": 54
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 36,
+          "new_output_xors": 36
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 24,
+          "new_output_xors": 24
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 16,
+          "new_output_xors": 16
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 4,
+      "N": 16,
+      "kind": "circulant",
+      "formula_product_occurrences": 256,
+      "unique_products": 81,
+      "unique_vector_forms": 81,
+      "unique_coefficient_forms": 41,
+      "vector_xors": 65,
+      "output_xors": 130,
+      "field_multiplies": 81,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 81,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 54,
+          "new_output_xors": 54
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 36,
+          "new_output_xors": 36
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 24,
+          "new_output_xors": 24
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 16,
+          "new_output_xors": 16
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 4,
+      "N": 16,
+      "kind": "unit-circulant",
+      "formula_product_occurrences": 256,
+      "unique_products": 81,
+      "unique_vector_forms": 81,
+      "unique_coefficient_forms": 41,
+      "vector_xors": 65,
+      "output_xors": 130,
+      "field_multiplies": 65,
+      "identity_copies": 16,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 81,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 54,
+          "new_output_xors": 54
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 36,
+          "new_output_xors": 36
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 24,
+          "new_output_xors": 24
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 16,
+          "new_output_xors": 16
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 5,
+      "N": 32,
+      "kind": "toeplitz",
+      "formula_product_occurrences": 1024,
+      "unique_products": 243,
+      "unique_vector_forms": 243,
+      "unique_coefficient_forms": 243,
+      "vector_xors": 211,
+      "output_xors": 422,
+      "field_multiplies": 243,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 243,
+          "value_bytes_if_packed": 243,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 162,
+          "new_output_xors": 162
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 108,
+          "new_output_xors": 108
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 72,
+          "new_output_xors": 72
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 48,
+          "new_output_xors": 48
+        },
+        {
+          "level": 5,
+          "block_side": 32,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 32,
+          "new_output_xors": 32
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 5,
+      "N": 32,
+      "kind": "circulant",
+      "formula_product_occurrences": 1024,
+      "unique_products": 243,
+      "unique_vector_forms": 243,
+      "unique_coefficient_forms": 122,
+      "vector_xors": 211,
+      "output_xors": 422,
+      "field_multiplies": 243,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 243,
+          "value_bytes_if_packed": 243,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 162,
+          "new_output_xors": 162
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 108,
+          "new_output_xors": 108
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 72,
+          "new_output_xors": 72
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 48,
+          "new_output_xors": 48
+        },
+        {
+          "level": 5,
+          "block_side": 32,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 32,
+          "new_output_xors": 32
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 5,
+      "N": 32,
+      "kind": "unit-circulant",
+      "formula_product_occurrences": 1024,
+      "unique_products": 243,
+      "unique_vector_forms": 243,
+      "unique_coefficient_forms": 122,
+      "vector_xors": 211,
+      "output_xors": 422,
+      "field_multiplies": 211,
+      "identity_copies": 32,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 243,
+          "value_bytes_if_packed": 243,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 162,
+          "new_output_xors": 162
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 108,
+          "new_output_xors": 108
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 72,
+          "new_output_xors": 72
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 48,
+          "new_output_xors": 48
+        },
+        {
+          "level": 5,
+          "block_side": 32,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 32,
+          "new_output_xors": 32
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 6,
+      "N": 64,
+      "kind": "toeplitz",
+      "formula_product_occurrences": 4096,
+      "unique_products": 729,
+      "unique_vector_forms": 729,
+      "unique_coefficient_forms": 729,
+      "vector_xors": 665,
+      "output_xors": 1330,
+      "field_multiplies": 729,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 729,
+          "value_bytes_if_packed": 729,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 243,
+          "value_bytes_if_packed": 486,
+          "new_output_xors": 486
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 324,
+          "new_output_xors": 324
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 216,
+          "new_output_xors": 216
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 144,
+          "new_output_xors": 144
+        },
+        {
+          "level": 5,
+          "block_side": 32,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 96,
+          "new_output_xors": 96
+        },
+        {
+          "level": 6,
+          "block_side": 64,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 64,
+          "new_output_xors": 64
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 6,
+      "N": 64,
+      "kind": "circulant",
+      "formula_product_occurrences": 4096,
+      "unique_products": 729,
+      "unique_vector_forms": 729,
+      "unique_coefficient_forms": 365,
+      "vector_xors": 665,
+      "output_xors": 1330,
+      "field_multiplies": 729,
+      "identity_copies": 0,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 729,
+          "value_bytes_if_packed": 729,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 243,
+          "value_bytes_if_packed": 486,
+          "new_output_xors": 486
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 324,
+          "new_output_xors": 324
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 216,
+          "new_output_xors": 216
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 144,
+          "new_output_xors": 144
+        },
+        {
+          "level": 5,
+          "block_side": 32,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 96,
+          "new_output_xors": 96
+        },
+        {
+          "level": 6,
+          "block_side": 64,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 64,
+          "new_output_xors": 64
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    },
+    {
+      "exponent": 6,
+      "N": 64,
+      "kind": "unit-circulant",
+      "formula_product_occurrences": 4096,
+      "unique_products": 729,
+      "unique_vector_forms": 729,
+      "unique_coefficient_forms": 365,
+      "vector_xors": 665,
+      "output_xors": 1330,
+      "field_multiplies": 665,
+      "identity_copies": 64,
+      "levels": [
+        {
+          "level": 0,
+          "block_side": 1,
+          "unique_blocks": 729,
+          "value_bytes_if_packed": 729,
+          "new_output_xors": 0
+        },
+        {
+          "level": 1,
+          "block_side": 2,
+          "unique_blocks": 243,
+          "value_bytes_if_packed": 486,
+          "new_output_xors": 486
+        },
+        {
+          "level": 2,
+          "block_side": 4,
+          "unique_blocks": 81,
+          "value_bytes_if_packed": 324,
+          "new_output_xors": 324
+        },
+        {
+          "level": 3,
+          "block_side": 8,
+          "unique_blocks": 27,
+          "value_bytes_if_packed": 216,
+          "new_output_xors": 216
+        },
+        {
+          "level": 4,
+          "block_side": 16,
+          "unique_blocks": 9,
+          "value_bytes_if_packed": 144,
+          "new_output_xors": 144
+        },
+        {
+          "level": 5,
+          "block_side": 32,
+          "unique_blocks": 3,
+          "value_bytes_if_packed": 96,
+          "new_output_xors": 96
+        },
+        {
+          "level": 6,
+          "block_side": 64,
+          "unique_blocks": 1,
+          "value_bytes_if_packed": 64,
+          "new_output_xors": 64
+        }
+      ],
+      "symbolic_identity": true,
+      "numeric_identity": true,
+      "matches_existing_iterative": true
+    }
+  ]
+}

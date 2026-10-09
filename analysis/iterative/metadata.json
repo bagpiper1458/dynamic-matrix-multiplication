@@ -1,0 +1,46 @@
+{
+  "started_utc": "2026-10-08T16:27:04.630808+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+  "compile_flags": "-std=c++17 -O3 -Wall -Wextra -Wpedantic",
+  "note": "Local run; fixed inputs per size; seven medians by default; no memory profiler during timing.",
+  "source_sha256": {
+    "cpp/dynamic_matrix.hpp": "84744f3b392ab1305293e7e9b2f847466156b0b5950290586281384e6f7daab8",
+    "cpp/iterative_matrix.hpp": "8fac99fa75cf0a446f2f009dbeb6e259bd0085d1d86fc15754b4fbd228cbf571",
+    "cpp/compare.cpp": "4fa52b38a93be1b833cf54efb13f89d6b97b145d921ba3f93024ce60ba5cf992"
+  },
+  "runs": [
+    {
+      "command": [
+        "build/dm_compare.exe",
+        "10",
+        "7",
+        "20",
+        "toeplitz"
+      ],
+      "stderr": "compiler=Clang 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)\nseed=20261009 repeats=7 iterations=20 scalar_modulus=0x11B units=ms_per_call counters=disabled sizeof_size_t=8 sizeof_recursive_node=40\n"
+    },
+    {
+      "command": [
+        "build/dm_compare.exe",
+        "10",
+        "7",
+        "20",
+        "circulant"
+      ],
+      "stderr": "compiler=Clang 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)\nseed=20261009 repeats=7 iterations=20 scalar_modulus=0x11B units=ms_per_call counters=disabled sizeof_size_t=8 sizeof_recursive_node=40\n"
+    },
+    {
+      "command": [
+        "build/dm_compare.exe",
+        "10",
+        "7",
+        "20",
+        "unit-circulant"
+      ],
+      "stderr": "compiler=Clang 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)\nseed=20261009 repeats=7 iterations=20 scalar_modulus=0x11B units=ms_per_call counters=disabled sizeof_size_t=8 sizeof_recursive_node=40\n"
+    }
+  ],
+  "finished_utc": "2026-10-08T16:27:23.940435+00:00",
+  "path_note": "Executable paths made repository-relative for publication; samples, arguments and source hashes are unchanged."
+}

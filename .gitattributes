@@ -1,1 +1,3 @@
 * text=auto eol=lf
+# Matplotlib SVG paths deliberately contain trailing spaces.
+*.svg -whitespace

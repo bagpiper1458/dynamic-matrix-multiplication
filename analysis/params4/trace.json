@@ -1,0 +1,3686 @@
+[
+  {
+    "kind": "toeplitz",
+    "matrix": [
+      [
+        2,
+        9,
+        11,
+        13
+      ],
+      [
+        7,
+        2,
+        9,
+        11
+      ],
+      [
+        1,
+        7,
+        2,
+        9
+      ],
+      [
+        3,
+        1,
+        7,
+        2
+      ]
+    ],
+    "column": [
+      2,
+      7,
+      1,
+      3
+    ],
+    "row": [
+      2,
+      9,
+      11,
+      13
+    ],
+    "vector": [
+      219,
+      19,
+      83,
+      69
+    ],
+    "coefficient_inputs": {
+      "a[-3]": 13,
+      "a[-2]": 11,
+      "a[-1]": 9,
+      "a[0]": 2,
+      "a[1]": 7,
+      "a[2]": 1,
+      "a[3]": 3
+    },
+    "matrix_steps": [
+      {
+        "id": "c0",
+        "op": "xor",
+        "deps": [
+          "a[-3]",
+          "a[-1]"
+        ],
+        "expression": "a[-3] XOR a[-1]",
+        "expanded": "a[-1] XOR a[-3]",
+        "value": 4,
+        "step": 1,
+        "users": [
+          "c7"
+        ],
+        "retained": false,
+        "last_use": 8
+      },
+      {
+        "id": "c1",
+        "op": "xor",
+        "deps": [
+          "a[-2]",
+          "a[0]"
+        ],
+        "expression": "a[-2] XOR a[0]",
+        "expanded": "a[-2] XOR a[0]",
+        "value": 9,
+        "step": 2,
+        "users": [
+          "c7",
+          "c8"
+        ],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c2",
+        "op": "xor",
+        "deps": [
+          "a[-1]",
+          "a[1]"
+        ],
+        "expression": "a[-1] XOR a[1]",
+        "expanded": "a[-1] XOR a[1]",
+        "value": 14,
+        "step": 3,
+        "users": [
+          "c8",
+          "c9"
+        ],
+        "retained": false,
+        "last_use": 10
+      },
+      {
+        "id": "c3",
+        "op": "xor",
+        "deps": [
+          "a[0]",
+          "a[2]"
+        ],
+        "expression": "a[0] XOR a[2]",
+        "expanded": "a[0] XOR a[2]",
+        "value": 3,
+        "step": 4,
+        "users": [
+          "c9",
+          "c10"
+        ],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c4",
+        "op": "xor",
+        "deps": [
+          "a[1]",
+          "a[3]"
+        ],
+        "expression": "a[1] XOR a[3]",
+        "expanded": "a[1] XOR a[3]",
+        "value": 4,
+        "step": 5,
+        "users": [
+          "c10"
+        ],
+        "retained": false,
+        "last_use": 11
+      },
+      {
+        "id": "c5",
+        "op": "xor",
+        "deps": [
+          "a[-1]",
+          "a[0]"
+        ],
+        "expression": "a[-1] XOR a[0]",
+        "expanded": "a[-1] XOR a[0]",
+        "value": 11,
+        "step": 6,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c6",
+        "op": "xor",
+        "deps": [
+          "a[0]",
+          "a[1]"
+        ],
+        "expression": "a[0] XOR a[1]",
+        "expanded": "a[0] XOR a[1]",
+        "value": 5,
+        "step": 7,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c7",
+        "op": "xor",
+        "deps": [
+          "c0",
+          "c1"
+        ],
+        "expression": "c0 XOR c1",
+        "expanded": "a[-1] XOR a[-2] XOR a[-3] XOR a[0]",
+        "value": 13,
+        "step": 8,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c8",
+        "op": "xor",
+        "deps": [
+          "c1",
+          "c2"
+        ],
+        "expression": "c1 XOR c2",
+        "expanded": "a[-1] XOR a[-2] XOR a[0] XOR a[1]",
+        "value": 7,
+        "step": 9,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c9",
+        "op": "xor",
+        "deps": [
+          "c2",
+          "c3"
+        ],
+        "expression": "c2 XOR c3",
+        "expanded": "a[-1] XOR a[0] XOR a[1] XOR a[2]",
+        "value": 13,
+        "step": 10,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c10",
+        "op": "xor",
+        "deps": [
+          "c3",
+          "c4"
+        ],
+        "expression": "c3 XOR c4",
+        "expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "value": 7,
+        "step": 11,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      }
+    ],
+    "persistent_coefficients": [
+      {
+        "id": "a[0]",
+        "value": 2
+      },
+      {
+        "id": "c1",
+        "value": 9
+      },
+      {
+        "id": "c10",
+        "value": 7
+      },
+      {
+        "id": "c3",
+        "value": 3
+      },
+      {
+        "id": "c5",
+        "value": 11
+      },
+      {
+        "id": "c6",
+        "value": 5
+      },
+      {
+        "id": "c7",
+        "value": 13
+      },
+      {
+        "id": "c8",
+        "value": 7
+      },
+      {
+        "id": "c9",
+        "value": 13
+      }
+    ],
+    "products": [
+      {
+        "id": "p0",
+        "coefficient": "a[0]",
+        "coefficient_expanded": "a[0]",
+        "vector": "vAll",
+        "vector_expanded": "b0 XOR b1 XOR b2 XOR b3",
+        "value": 167,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y1",
+          "y2",
+          "y3"
+        ]
+      },
+      {
+        "id": "p1",
+        "coefficient": "c5",
+        "coefficient_expanded": "a[-1] XOR a[0]",
+        "vector": "v13",
+        "vector_expanded": "b1 XOR b3",
+        "value": 124,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y2"
+        ]
+      },
+      {
+        "id": "p2",
+        "coefficient": "c6",
+        "coefficient_expanded": "a[0] XOR a[1]",
+        "vector": "v02",
+        "vector_expanded": "b0 XOR b2",
+        "value": 158,
+        "operation": "multiply",
+        "outputs": [
+          "y1",
+          "y3"
+        ]
+      },
+      {
+        "id": "p3",
+        "coefficient": "c1",
+        "coefficient_expanded": "a[-2] XOR a[0]",
+        "vector": "v23",
+        "vector_expanded": "b2 XOR b3",
+        "value": 166,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y1"
+        ]
+      },
+      {
+        "id": "p4",
+        "coefficient": "c7",
+        "coefficient_expanded": "a[-1] XOR a[-2] XOR a[-3] XOR a[0]",
+        "vector": "b3",
+        "vector_expanded": "b3",
+        "value": 84,
+        "operation": "multiply",
+        "outputs": [
+          "y0"
+        ]
+      },
+      {
+        "id": "p5",
+        "coefficient": "c8",
+        "coefficient_expanded": "a[-1] XOR a[-2] XOR a[0] XOR a[1]",
+        "vector": "b2",
+        "vector_expanded": "b2",
+        "value": 162,
+        "operation": "multiply",
+        "outputs": [
+          "y1"
+        ]
+      },
+      {
+        "id": "p6",
+        "coefficient": "c3",
+        "coefficient_expanded": "a[0] XOR a[2]",
+        "vector": "v01",
+        "vector_expanded": "b0 XOR b1",
+        "value": 67,
+        "operation": "multiply",
+        "outputs": [
+          "y2",
+          "y3"
+        ]
+      },
+      {
+        "id": "p7",
+        "coefficient": "c9",
+        "coefficient_expanded": "a[-1] XOR a[0] XOR a[1] XOR a[2]",
+        "vector": "b1",
+        "vector_expanded": "b1",
+        "value": 199,
+        "operation": "multiply",
+        "outputs": [
+          "y2"
+        ]
+      },
+      {
+        "id": "p8",
+        "coefficient": "c10",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b0",
+        "vector_expanded": "b0",
+        "value": 55,
+        "operation": "multiply",
+        "outputs": [
+          "y3"
+        ]
+      }
+    ],
+    "formula_terms": [
+      {
+        "output": "y0",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y0",
+        "mask": 1,
+        "A": "a[-1] XOR a[0]",
+        "B": "b1 XOR b3",
+        "product": "p1"
+      },
+      {
+        "output": "y0",
+        "mask": 2,
+        "A": "a[-2] XOR a[0]",
+        "B": "b2 XOR b3",
+        "product": "p3"
+      },
+      {
+        "output": "y0",
+        "mask": 3,
+        "A": "a[-1] XOR a[-2] XOR a[-3] XOR a[0]",
+        "B": "b3",
+        "product": "p4"
+      },
+      {
+        "output": "y1",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y1",
+        "mask": 1,
+        "A": "a[0] XOR a[1]",
+        "B": "b0 XOR b2",
+        "product": "p2"
+      },
+      {
+        "output": "y1",
+        "mask": 2,
+        "A": "a[-2] XOR a[0]",
+        "B": "b2 XOR b3",
+        "product": "p3"
+      },
+      {
+        "output": "y1",
+        "mask": 3,
+        "A": "a[-1] XOR a[-2] XOR a[0] XOR a[1]",
+        "B": "b2",
+        "product": "p5"
+      },
+      {
+        "output": "y2",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y2",
+        "mask": 1,
+        "A": "a[-1] XOR a[0]",
+        "B": "b1 XOR b3",
+        "product": "p1"
+      },
+      {
+        "output": "y2",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b0 XOR b1",
+        "product": "p6"
+      },
+      {
+        "output": "y2",
+        "mask": 3,
+        "A": "a[-1] XOR a[0] XOR a[1] XOR a[2]",
+        "B": "b1",
+        "product": "p7"
+      },
+      {
+        "output": "y3",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y3",
+        "mask": 1,
+        "A": "a[0] XOR a[1]",
+        "B": "b0 XOR b2",
+        "product": "p2"
+      },
+      {
+        "output": "y3",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b0 XOR b1",
+        "product": "p6"
+      },
+      {
+        "output": "y3",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b0",
+        "product": "p8"
+      }
+    ],
+    "vector_steps": [
+      {
+        "step": 1,
+        "id": "v01",
+        "op": "xor",
+        "deps": [
+          "b0",
+          "b1"
+        ],
+        "expression": "b0 XOR b1",
+        "value": 200,
+        "slot": 0,
+        "released": [],
+        "live_before": {},
+        "live_after": {
+          "v01": 0
+        },
+        "last_use": 12
+      },
+      {
+        "step": 2,
+        "id": "v23",
+        "op": "xor",
+        "deps": [
+          "b2",
+          "b3"
+        ],
+        "expression": "b2 XOR b3",
+        "value": 22,
+        "slot": 1,
+        "released": [],
+        "live_before": {
+          "v01": 0
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1
+        },
+        "last_use": 9
+      },
+      {
+        "step": 3,
+        "id": "vAll",
+        "op": "xor",
+        "deps": [
+          "v01",
+          "v23"
+        ],
+        "expression": "v01 XOR v23",
+        "value": 222,
+        "slot": 2,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2
+        },
+        "last_use": 6
+      },
+      {
+        "step": 4,
+        "id": "v13",
+        "op": "xor",
+        "deps": [
+          "b1",
+          "b3"
+        ],
+        "expression": "b1 XOR b3",
+        "value": 86,
+        "slot": 3,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3
+        },
+        "last_use": 7
+      },
+      {
+        "step": 5,
+        "id": "v02",
+        "op": "xor",
+        "deps": [
+          "b0",
+          "b2"
+        ],
+        "expression": "b0 XOR b2",
+        "value": 136,
+        "slot": 4,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3,
+          "v02": 4
+        },
+        "last_use": 8
+      },
+      {
+        "step": 6,
+        "id": "p0",
+        "op": "multiply",
+        "deps": [
+          "a[0]",
+          "vAll"
+        ],
+        "expression": "a[0] * vAll",
+        "value": 167,
+        "slot": 2,
+        "released": [
+          "vAll"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3,
+          "v02": 4
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "v13": 3,
+          "v02": 4,
+          "p0": 2
+        },
+        "last_use": 16
+      },
+      {
+        "step": 7,
+        "id": "p1",
+        "op": "multiply",
+        "deps": [
+          "c5",
+          "v13"
+        ],
+        "expression": "c5 * v13",
+        "value": 124,
+        "slot": 3,
+        "released": [
+          "v13"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "v13": 3,
+          "v02": 4,
+          "p0": 2
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "v02": 4,
+          "p0": 2,
+          "p1": 3
+        },
+        "last_use": 15
+      },
+      {
+        "step": 8,
+        "id": "p2",
+        "op": "multiply",
+        "deps": [
+          "c6",
+          "v02"
+        ],
+        "expression": "c6 * v02",
+        "value": 158,
+        "slot": 4,
+        "released": [
+          "v02"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "v02": 4,
+          "p0": 2,
+          "p1": 3
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4
+        },
+        "last_use": 16
+      },
+      {
+        "step": 9,
+        "id": "p3",
+        "op": "multiply",
+        "deps": [
+          "c1",
+          "v23"
+        ],
+        "expression": "c1 * v23",
+        "value": 166,
+        "slot": 1,
+        "released": [
+          "v23"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1
+        },
+        "last_use": 18
+      },
+      {
+        "step": 10,
+        "id": "p4",
+        "op": "multiply",
+        "deps": [
+          "c7",
+          "b3"
+        ],
+        "expression": "c7 * b3",
+        "value": 84,
+        "slot": 5,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5
+        },
+        "last_use": 17
+      },
+      {
+        "step": 11,
+        "id": "p5",
+        "op": "multiply",
+        "deps": [
+          "c8",
+          "b2"
+        ],
+        "expression": "c8 * b2",
+        "value": 162,
+        "slot": 6,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6
+        },
+        "last_use": 18
+      },
+      {
+        "step": 12,
+        "id": "p6",
+        "op": "multiply",
+        "deps": [
+          "c3",
+          "v01"
+        ],
+        "expression": "c3 * v01",
+        "value": 67,
+        "slot": 0,
+        "released": [
+          "v01"
+        ],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0
+        },
+        "last_use": 20
+      },
+      {
+        "step": 13,
+        "id": "p7",
+        "op": "multiply",
+        "deps": [
+          "c9",
+          "b1"
+        ],
+        "expression": "c9 * b1",
+        "value": 199,
+        "slot": 7,
+        "released": [],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7
+        },
+        "last_use": 19
+      },
+      {
+        "step": 14,
+        "id": "p8",
+        "op": "multiply",
+        "deps": [
+          "c10",
+          "b0"
+        ],
+        "expression": "c10 * b0",
+        "value": 55,
+        "slot": 8,
+        "released": [],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8
+        },
+        "last_use": 20
+      },
+      {
+        "step": 15,
+        "id": "f0",
+        "op": "xor",
+        "deps": [
+          "p0",
+          "p1"
+        ],
+        "expression": "p0 XOR p1",
+        "value": 219,
+        "slot": 3,
+        "released": [
+          "p1"
+        ],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8
+        },
+        "live_after": {
+          "p0": 2,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3
+        },
+        "last_use": 23
+      },
+      {
+        "step": 16,
+        "id": "f1",
+        "op": "xor",
+        "deps": [
+          "p0",
+          "p2"
+        ],
+        "expression": "p0 XOR p2",
+        "value": 57,
+        "slot": 2,
+        "released": [
+          "p0",
+          "p2"
+        ],
+        "live_before": {
+          "p0": 2,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3
+        },
+        "live_after": {
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2
+        },
+        "last_use": 24
+      },
+      {
+        "step": 17,
+        "id": "g0",
+        "op": "xor",
+        "deps": [
+          "p3",
+          "p4"
+        ],
+        "expression": "p3 XOR p4",
+        "value": 242,
+        "slot": 4,
+        "released": [
+          "p4"
+        ],
+        "live_before": {
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2
+        },
+        "live_after": {
+          "p3": 1,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4
+        },
+        "last_use": 21
+      },
+      {
+        "step": 18,
+        "id": "g1",
+        "op": "xor",
+        "deps": [
+          "p3",
+          "p5"
+        ],
+        "expression": "p3 XOR p5",
+        "value": 4,
+        "slot": 1,
+        "released": [
+          "p3",
+          "p5"
+        ],
+        "live_before": {
+          "p3": 1,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4
+        },
+        "live_after": {
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1
+        },
+        "last_use": 22
+      },
+      {
+        "step": 19,
+        "id": "h0",
+        "op": "xor",
+        "deps": [
+          "p6",
+          "p7"
+        ],
+        "expression": "p6 XOR p7",
+        "value": 132,
+        "slot": 5,
+        "released": [
+          "p7"
+        ],
+        "live_before": {
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1
+        },
+        "live_after": {
+          "p6": 0,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5
+        },
+        "last_use": 23
+      },
+      {
+        "step": 20,
+        "id": "h1",
+        "op": "xor",
+        "deps": [
+          "p6",
+          "p8"
+        ],
+        "expression": "p6 XOR p8",
+        "value": 116,
+        "slot": 0,
+        "released": [
+          "p6",
+          "p8"
+        ],
+        "live_before": {
+          "p6": 0,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0
+        },
+        "last_use": 24
+      },
+      {
+        "step": 21,
+        "id": "y0",
+        "op": "xor",
+        "deps": [
+          "f0",
+          "g0"
+        ],
+        "expression": "f0 XOR g0",
+        "value": 41,
+        "slot": 4,
+        "released": [
+          "g0"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 22,
+        "id": "y1",
+        "op": "xor",
+        "deps": [
+          "f1",
+          "g1"
+        ],
+        "expression": "f1 XOR g1",
+        "value": 61,
+        "slot": 1,
+        "released": [
+          "g1"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 23,
+        "id": "y2",
+        "op": "xor",
+        "deps": [
+          "f0",
+          "h0"
+        ],
+        "expression": "f0 XOR h0",
+        "value": 95,
+        "slot": 3,
+        "released": [
+          "f0",
+          "h0"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1
+        },
+        "live_after": {
+          "f1": 2,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1,
+          "y2": 3
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 24,
+        "id": "y3",
+        "op": "xor",
+        "deps": [
+          "f1",
+          "h1"
+        ],
+        "expression": "f1 XOR h1",
+        "value": 77,
+        "slot": 0,
+        "released": [
+          "f1",
+          "h1"
+        ],
+        "live_before": {
+          "f1": 2,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1,
+          "y2": 3
+        },
+        "live_after": {
+          "y0": 4,
+          "y1": 1,
+          "y2": 3,
+          "y3": 0
+        },
+        "last_use": "保留輸出"
+      }
+    ],
+    "certificate": [
+      {
+        "output": "y0",
+        "surviving_monomials": [
+          "a[-1]*b1",
+          "a[-2]*b2",
+          "a[-3]*b3",
+          "a[0]*b0"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y1",
+        "surviving_monomials": [
+          "a[-1]*b2",
+          "a[-2]*b3",
+          "a[0]*b1",
+          "a[1]*b0"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y2",
+        "surviving_monomials": [
+          "a[-1]*b3",
+          "a[0]*b2",
+          "a[1]*b1",
+          "a[2]*b0"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y3",
+        "surviving_monomials": [
+          "a[0]*b3",
+          "a[1]*b2",
+          "a[2]*b1",
+          "a[3]*b0"
+        ],
+        "verified": true
+      }
+    ],
+    "output": [
+      41,
+      61,
+      95,
+      77
+    ],
+    "expected": [
+      41,
+      61,
+      95,
+      77
+    ],
+    "counts": {
+      "coefficient_xors": 11,
+      "vector_xors": 15,
+      "multiplications": 9,
+      "identity_copies": 0,
+      "retained_coefficients": 9,
+      "peak_slots": 9,
+      "schedule_steps": 24
+    }
+  },
+  {
+    "kind": "circulant",
+    "matrix": [
+      [
+        2,
+        3,
+        1,
+        7
+      ],
+      [
+        7,
+        2,
+        3,
+        1
+      ],
+      [
+        1,
+        7,
+        2,
+        3
+      ],
+      [
+        3,
+        1,
+        7,
+        2
+      ]
+    ],
+    "column": [
+      2,
+      7,
+      1,
+      3
+    ],
+    "row": [
+      2,
+      3,
+      1,
+      7
+    ],
+    "vector": [
+      219,
+      19,
+      83,
+      69
+    ],
+    "coefficient_inputs": {
+      "a[0]": 2,
+      "a[1]": 7,
+      "a[2]": 1,
+      "a[3]": 3
+    },
+    "matrix_steps": [
+      {
+        "id": "c0",
+        "op": "xor",
+        "deps": [
+          "a[1]",
+          "a[3]"
+        ],
+        "expression": "a[1] XOR a[3]",
+        "expanded": "a[1] XOR a[3]",
+        "value": 4,
+        "step": 1,
+        "users": [
+          "c4"
+        ],
+        "retained": false,
+        "last_use": 5
+      },
+      {
+        "id": "c1",
+        "op": "xor",
+        "deps": [
+          "a[0]",
+          "a[2]"
+        ],
+        "expression": "a[0] XOR a[2]",
+        "expanded": "a[0] XOR a[2]",
+        "value": 3,
+        "step": 2,
+        "users": [
+          "c4"
+        ],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c2",
+        "op": "xor",
+        "deps": [
+          "a[0]",
+          "a[3]"
+        ],
+        "expression": "a[0] XOR a[3]",
+        "expanded": "a[0] XOR a[3]",
+        "value": 1,
+        "step": 3,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c3",
+        "op": "xor",
+        "deps": [
+          "a[0]",
+          "a[1]"
+        ],
+        "expression": "a[0] XOR a[1]",
+        "expanded": "a[0] XOR a[1]",
+        "value": 5,
+        "step": 4,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c4",
+        "op": "xor",
+        "deps": [
+          "c0",
+          "c1"
+        ],
+        "expression": "c0 XOR c1",
+        "expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "value": 7,
+        "step": 5,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      }
+    ],
+    "persistent_coefficients": [
+      {
+        "id": "a[0]",
+        "value": 2
+      },
+      {
+        "id": "c1",
+        "value": 3
+      },
+      {
+        "id": "c2",
+        "value": 1
+      },
+      {
+        "id": "c3",
+        "value": 5
+      },
+      {
+        "id": "c4",
+        "value": 7
+      }
+    ],
+    "products": [
+      {
+        "id": "p0",
+        "coefficient": "a[0]",
+        "coefficient_expanded": "a[0]",
+        "vector": "vAll",
+        "vector_expanded": "b0 XOR b1 XOR b2 XOR b3",
+        "value": 167,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y1",
+          "y2",
+          "y3"
+        ]
+      },
+      {
+        "id": "p1",
+        "coefficient": "c2",
+        "coefficient_expanded": "a[0] XOR a[3]",
+        "vector": "v13",
+        "vector_expanded": "b1 XOR b3",
+        "value": 86,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y2"
+        ]
+      },
+      {
+        "id": "p2",
+        "coefficient": "c3",
+        "coefficient_expanded": "a[0] XOR a[1]",
+        "vector": "v02",
+        "vector_expanded": "b0 XOR b2",
+        "value": 158,
+        "operation": "multiply",
+        "outputs": [
+          "y1",
+          "y3"
+        ]
+      },
+      {
+        "id": "p3",
+        "coefficient": "c1",
+        "coefficient_expanded": "a[0] XOR a[2]",
+        "vector": "v23",
+        "vector_expanded": "b2 XOR b3",
+        "value": 58,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y1"
+        ]
+      },
+      {
+        "id": "p4",
+        "coefficient": "c4",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b3",
+        "vector_expanded": "b3",
+        "value": 192,
+        "operation": "multiply",
+        "outputs": [
+          "y0"
+        ]
+      },
+      {
+        "id": "p5",
+        "coefficient": "c4",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b2",
+        "vector_expanded": "b2",
+        "value": 162,
+        "operation": "multiply",
+        "outputs": [
+          "y1"
+        ]
+      },
+      {
+        "id": "p6",
+        "coefficient": "c1",
+        "coefficient_expanded": "a[0] XOR a[2]",
+        "vector": "v01",
+        "vector_expanded": "b0 XOR b1",
+        "value": 67,
+        "operation": "multiply",
+        "outputs": [
+          "y2",
+          "y3"
+        ]
+      },
+      {
+        "id": "p7",
+        "coefficient": "c4",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b1",
+        "vector_expanded": "b1",
+        "value": 121,
+        "operation": "multiply",
+        "outputs": [
+          "y2"
+        ]
+      },
+      {
+        "id": "p8",
+        "coefficient": "c4",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b0",
+        "vector_expanded": "b0",
+        "value": 55,
+        "operation": "multiply",
+        "outputs": [
+          "y3"
+        ]
+      }
+    ],
+    "formula_terms": [
+      {
+        "output": "y0",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y0",
+        "mask": 1,
+        "A": "a[0] XOR a[3]",
+        "B": "b1 XOR b3",
+        "product": "p1"
+      },
+      {
+        "output": "y0",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b2 XOR b3",
+        "product": "p3"
+      },
+      {
+        "output": "y0",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b3",
+        "product": "p4"
+      },
+      {
+        "output": "y1",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y1",
+        "mask": 1,
+        "A": "a[0] XOR a[1]",
+        "B": "b0 XOR b2",
+        "product": "p2"
+      },
+      {
+        "output": "y1",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b2 XOR b3",
+        "product": "p3"
+      },
+      {
+        "output": "y1",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b2",
+        "product": "p5"
+      },
+      {
+        "output": "y2",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y2",
+        "mask": 1,
+        "A": "a[0] XOR a[3]",
+        "B": "b1 XOR b3",
+        "product": "p1"
+      },
+      {
+        "output": "y2",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b0 XOR b1",
+        "product": "p6"
+      },
+      {
+        "output": "y2",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b1",
+        "product": "p7"
+      },
+      {
+        "output": "y3",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y3",
+        "mask": 1,
+        "A": "a[0] XOR a[1]",
+        "B": "b0 XOR b2",
+        "product": "p2"
+      },
+      {
+        "output": "y3",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b0 XOR b1",
+        "product": "p6"
+      },
+      {
+        "output": "y3",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b0",
+        "product": "p8"
+      }
+    ],
+    "vector_steps": [
+      {
+        "step": 1,
+        "id": "v01",
+        "op": "xor",
+        "deps": [
+          "b0",
+          "b1"
+        ],
+        "expression": "b0 XOR b1",
+        "value": 200,
+        "slot": 0,
+        "released": [],
+        "live_before": {},
+        "live_after": {
+          "v01": 0
+        },
+        "last_use": 12
+      },
+      {
+        "step": 2,
+        "id": "v23",
+        "op": "xor",
+        "deps": [
+          "b2",
+          "b3"
+        ],
+        "expression": "b2 XOR b3",
+        "value": 22,
+        "slot": 1,
+        "released": [],
+        "live_before": {
+          "v01": 0
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1
+        },
+        "last_use": 9
+      },
+      {
+        "step": 3,
+        "id": "vAll",
+        "op": "xor",
+        "deps": [
+          "v01",
+          "v23"
+        ],
+        "expression": "v01 XOR v23",
+        "value": 222,
+        "slot": 2,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2
+        },
+        "last_use": 6
+      },
+      {
+        "step": 4,
+        "id": "v13",
+        "op": "xor",
+        "deps": [
+          "b1",
+          "b3"
+        ],
+        "expression": "b1 XOR b3",
+        "value": 86,
+        "slot": 3,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3
+        },
+        "last_use": 7
+      },
+      {
+        "step": 5,
+        "id": "v02",
+        "op": "xor",
+        "deps": [
+          "b0",
+          "b2"
+        ],
+        "expression": "b0 XOR b2",
+        "value": 136,
+        "slot": 4,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3,
+          "v02": 4
+        },
+        "last_use": 8
+      },
+      {
+        "step": 6,
+        "id": "p0",
+        "op": "multiply",
+        "deps": [
+          "a[0]",
+          "vAll"
+        ],
+        "expression": "a[0] * vAll",
+        "value": 167,
+        "slot": 2,
+        "released": [
+          "vAll"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3,
+          "v02": 4
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "v13": 3,
+          "v02": 4,
+          "p0": 2
+        },
+        "last_use": 16
+      },
+      {
+        "step": 7,
+        "id": "p1",
+        "op": "multiply",
+        "deps": [
+          "c2",
+          "v13"
+        ],
+        "expression": "c2 * v13",
+        "value": 86,
+        "slot": 3,
+        "released": [
+          "v13"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "v13": 3,
+          "v02": 4,
+          "p0": 2
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "v02": 4,
+          "p0": 2,
+          "p1": 3
+        },
+        "last_use": 15
+      },
+      {
+        "step": 8,
+        "id": "p2",
+        "op": "multiply",
+        "deps": [
+          "c3",
+          "v02"
+        ],
+        "expression": "c3 * v02",
+        "value": 158,
+        "slot": 4,
+        "released": [
+          "v02"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "v02": 4,
+          "p0": 2,
+          "p1": 3
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4
+        },
+        "last_use": 16
+      },
+      {
+        "step": 9,
+        "id": "p3",
+        "op": "multiply",
+        "deps": [
+          "c1",
+          "v23"
+        ],
+        "expression": "c1 * v23",
+        "value": 58,
+        "slot": 1,
+        "released": [
+          "v23"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1
+        },
+        "last_use": 18
+      },
+      {
+        "step": 10,
+        "id": "p4",
+        "op": "multiply",
+        "deps": [
+          "c4",
+          "b3"
+        ],
+        "expression": "c4 * b3",
+        "value": 192,
+        "slot": 5,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5
+        },
+        "last_use": 17
+      },
+      {
+        "step": 11,
+        "id": "p5",
+        "op": "multiply",
+        "deps": [
+          "c4",
+          "b2"
+        ],
+        "expression": "c4 * b2",
+        "value": 162,
+        "slot": 6,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6
+        },
+        "last_use": 18
+      },
+      {
+        "step": 12,
+        "id": "p6",
+        "op": "multiply",
+        "deps": [
+          "c1",
+          "v01"
+        ],
+        "expression": "c1 * v01",
+        "value": 67,
+        "slot": 0,
+        "released": [
+          "v01"
+        ],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0
+        },
+        "last_use": 20
+      },
+      {
+        "step": 13,
+        "id": "p7",
+        "op": "multiply",
+        "deps": [
+          "c4",
+          "b1"
+        ],
+        "expression": "c4 * b1",
+        "value": 121,
+        "slot": 7,
+        "released": [],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7
+        },
+        "last_use": 19
+      },
+      {
+        "step": 14,
+        "id": "p8",
+        "op": "multiply",
+        "deps": [
+          "c4",
+          "b0"
+        ],
+        "expression": "c4 * b0",
+        "value": 55,
+        "slot": 8,
+        "released": [],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8
+        },
+        "last_use": 20
+      },
+      {
+        "step": 15,
+        "id": "f0",
+        "op": "xor",
+        "deps": [
+          "p0",
+          "p1"
+        ],
+        "expression": "p0 XOR p1",
+        "value": 241,
+        "slot": 3,
+        "released": [
+          "p1"
+        ],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8
+        },
+        "live_after": {
+          "p0": 2,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3
+        },
+        "last_use": 23
+      },
+      {
+        "step": 16,
+        "id": "f1",
+        "op": "xor",
+        "deps": [
+          "p0",
+          "p2"
+        ],
+        "expression": "p0 XOR p2",
+        "value": 57,
+        "slot": 2,
+        "released": [
+          "p0",
+          "p2"
+        ],
+        "live_before": {
+          "p0": 2,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3
+        },
+        "live_after": {
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2
+        },
+        "last_use": 24
+      },
+      {
+        "step": 17,
+        "id": "g0",
+        "op": "xor",
+        "deps": [
+          "p3",
+          "p4"
+        ],
+        "expression": "p3 XOR p4",
+        "value": 250,
+        "slot": 4,
+        "released": [
+          "p4"
+        ],
+        "live_before": {
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2
+        },
+        "live_after": {
+          "p3": 1,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4
+        },
+        "last_use": 21
+      },
+      {
+        "step": 18,
+        "id": "g1",
+        "op": "xor",
+        "deps": [
+          "p3",
+          "p5"
+        ],
+        "expression": "p3 XOR p5",
+        "value": 152,
+        "slot": 1,
+        "released": [
+          "p3",
+          "p5"
+        ],
+        "live_before": {
+          "p3": 1,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4
+        },
+        "live_after": {
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1
+        },
+        "last_use": 22
+      },
+      {
+        "step": 19,
+        "id": "h0",
+        "op": "xor",
+        "deps": [
+          "p6",
+          "p7"
+        ],
+        "expression": "p6 XOR p7",
+        "value": 58,
+        "slot": 5,
+        "released": [
+          "p7"
+        ],
+        "live_before": {
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1
+        },
+        "live_after": {
+          "p6": 0,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5
+        },
+        "last_use": 23
+      },
+      {
+        "step": 20,
+        "id": "h1",
+        "op": "xor",
+        "deps": [
+          "p6",
+          "p8"
+        ],
+        "expression": "p6 XOR p8",
+        "value": 116,
+        "slot": 0,
+        "released": [
+          "p6",
+          "p8"
+        ],
+        "live_before": {
+          "p6": 0,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0
+        },
+        "last_use": 24
+      },
+      {
+        "step": 21,
+        "id": "y0",
+        "op": "xor",
+        "deps": [
+          "f0",
+          "g0"
+        ],
+        "expression": "f0 XOR g0",
+        "value": 11,
+        "slot": 4,
+        "released": [
+          "g0"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 22,
+        "id": "y1",
+        "op": "xor",
+        "deps": [
+          "f1",
+          "g1"
+        ],
+        "expression": "f1 XOR g1",
+        "value": 161,
+        "slot": 1,
+        "released": [
+          "g1"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 23,
+        "id": "y2",
+        "op": "xor",
+        "deps": [
+          "f0",
+          "h0"
+        ],
+        "expression": "f0 XOR h0",
+        "value": 203,
+        "slot": 3,
+        "released": [
+          "f0",
+          "h0"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1
+        },
+        "live_after": {
+          "f1": 2,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1,
+          "y2": 3
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 24,
+        "id": "y3",
+        "op": "xor",
+        "deps": [
+          "f1",
+          "h1"
+        ],
+        "expression": "f1 XOR h1",
+        "value": 77,
+        "slot": 0,
+        "released": [
+          "f1",
+          "h1"
+        ],
+        "live_before": {
+          "f1": 2,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1,
+          "y2": 3
+        },
+        "live_after": {
+          "y0": 4,
+          "y1": 1,
+          "y2": 3,
+          "y3": 0
+        },
+        "last_use": "保留輸出"
+      }
+    ],
+    "certificate": [
+      {
+        "output": "y0",
+        "surviving_monomials": [
+          "a[0]*b0",
+          "a[1]*b3",
+          "a[2]*b2",
+          "a[3]*b1"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y1",
+        "surviving_monomials": [
+          "a[0]*b1",
+          "a[1]*b0",
+          "a[2]*b3",
+          "a[3]*b2"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y2",
+        "surviving_monomials": [
+          "a[0]*b2",
+          "a[1]*b1",
+          "a[2]*b0",
+          "a[3]*b3"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y3",
+        "surviving_monomials": [
+          "a[0]*b3",
+          "a[1]*b2",
+          "a[2]*b1",
+          "a[3]*b0"
+        ],
+        "verified": true
+      }
+    ],
+    "output": [
+      11,
+      161,
+      203,
+      77
+    ],
+    "expected": [
+      11,
+      161,
+      203,
+      77
+    ],
+    "counts": {
+      "coefficient_xors": 5,
+      "vector_xors": 15,
+      "multiplications": 9,
+      "identity_copies": 0,
+      "retained_coefficients": 5,
+      "peak_slots": 9,
+      "schedule_steps": 24
+    }
+  },
+  {
+    "kind": "unit-circulant",
+    "matrix": [
+      [
+        2,
+        3,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        3,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        3
+      ],
+      [
+        3,
+        1,
+        1,
+        2
+      ]
+    ],
+    "column": [
+      2,
+      1,
+      1,
+      3
+    ],
+    "row": [
+      2,
+      3,
+      1,
+      1
+    ],
+    "vector": [
+      219,
+      19,
+      83,
+      69
+    ],
+    "coefficient_inputs": {
+      "a[0]": 2,
+      "a[1]": 1,
+      "a[2]": 1,
+      "a[3]": 3
+    },
+    "matrix_steps": [
+      {
+        "id": "c0",
+        "op": "xor",
+        "deps": [
+          "a[1]",
+          "a[3]"
+        ],
+        "expression": "a[1] XOR a[3]",
+        "expanded": "a[1] XOR a[3]",
+        "value": 2,
+        "step": 1,
+        "users": [
+          "c4"
+        ],
+        "retained": false,
+        "last_use": 5
+      },
+      {
+        "id": "c1",
+        "op": "xor",
+        "deps": [
+          "a[0]",
+          "a[2]"
+        ],
+        "expression": "a[0] XOR a[2]",
+        "expanded": "a[0] XOR a[2]",
+        "value": 3,
+        "step": 2,
+        "users": [
+          "c4"
+        ],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c2",
+        "op": "xor",
+        "deps": [
+          "a[0]",
+          "a[3]"
+        ],
+        "expression": "a[0] XOR a[3]",
+        "expanded": "a[0] XOR a[3]",
+        "value": 1,
+        "step": 3,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c3",
+        "op": "xor",
+        "deps": [
+          "a[0]",
+          "a[1]"
+        ],
+        "expression": "a[0] XOR a[1]",
+        "expanded": "a[0] XOR a[1]",
+        "value": 3,
+        "step": 4,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      },
+      {
+        "id": "c4",
+        "op": "xor",
+        "deps": [
+          "c0",
+          "c1"
+        ],
+        "expression": "c0 XOR c1",
+        "expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "value": 1,
+        "step": 5,
+        "users": [],
+        "retained": true,
+        "last_use": "矩陣不變時保留"
+      }
+    ],
+    "persistent_coefficients": [
+      {
+        "id": "a[0]",
+        "value": 2
+      },
+      {
+        "id": "c1",
+        "value": 3
+      },
+      {
+        "id": "c2",
+        "value": 1
+      },
+      {
+        "id": "c3",
+        "value": 3
+      },
+      {
+        "id": "c4",
+        "value": 1
+      }
+    ],
+    "products": [
+      {
+        "id": "p0",
+        "coefficient": "a[0]",
+        "coefficient_expanded": "a[0]",
+        "vector": "vAll",
+        "vector_expanded": "b0 XOR b1 XOR b2 XOR b3",
+        "value": 167,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y1",
+          "y2",
+          "y3"
+        ]
+      },
+      {
+        "id": "p1",
+        "coefficient": "c2",
+        "coefficient_expanded": "a[0] XOR a[3]",
+        "vector": "v13",
+        "vector_expanded": "b1 XOR b3",
+        "value": 86,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y2"
+        ]
+      },
+      {
+        "id": "p2",
+        "coefficient": "c3",
+        "coefficient_expanded": "a[0] XOR a[1]",
+        "vector": "v02",
+        "vector_expanded": "b0 XOR b2",
+        "value": 131,
+        "operation": "multiply",
+        "outputs": [
+          "y1",
+          "y3"
+        ]
+      },
+      {
+        "id": "p3",
+        "coefficient": "c1",
+        "coefficient_expanded": "a[0] XOR a[2]",
+        "vector": "v23",
+        "vector_expanded": "b2 XOR b3",
+        "value": 58,
+        "operation": "multiply",
+        "outputs": [
+          "y0",
+          "y1"
+        ]
+      },
+      {
+        "id": "p4",
+        "coefficient": "c4",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b3",
+        "vector_expanded": "b3",
+        "value": 69,
+        "operation": "copy",
+        "outputs": [
+          "y0"
+        ]
+      },
+      {
+        "id": "p5",
+        "coefficient": "c4",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b2",
+        "vector_expanded": "b2",
+        "value": 83,
+        "operation": "copy",
+        "outputs": [
+          "y1"
+        ]
+      },
+      {
+        "id": "p6",
+        "coefficient": "c1",
+        "coefficient_expanded": "a[0] XOR a[2]",
+        "vector": "v01",
+        "vector_expanded": "b0 XOR b1",
+        "value": 67,
+        "operation": "multiply",
+        "outputs": [
+          "y2",
+          "y3"
+        ]
+      },
+      {
+        "id": "p7",
+        "coefficient": "c4",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b1",
+        "vector_expanded": "b1",
+        "value": 19,
+        "operation": "copy",
+        "outputs": [
+          "y2"
+        ]
+      },
+      {
+        "id": "p8",
+        "coefficient": "c4",
+        "coefficient_expanded": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "vector": "b0",
+        "vector_expanded": "b0",
+        "value": 219,
+        "operation": "copy",
+        "outputs": [
+          "y3"
+        ]
+      }
+    ],
+    "formula_terms": [
+      {
+        "output": "y0",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y0",
+        "mask": 1,
+        "A": "a[0] XOR a[3]",
+        "B": "b1 XOR b3",
+        "product": "p1"
+      },
+      {
+        "output": "y0",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b2 XOR b3",
+        "product": "p3"
+      },
+      {
+        "output": "y0",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b3",
+        "product": "p4"
+      },
+      {
+        "output": "y1",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y1",
+        "mask": 1,
+        "A": "a[0] XOR a[1]",
+        "B": "b0 XOR b2",
+        "product": "p2"
+      },
+      {
+        "output": "y1",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b2 XOR b3",
+        "product": "p3"
+      },
+      {
+        "output": "y1",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b2",
+        "product": "p5"
+      },
+      {
+        "output": "y2",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y2",
+        "mask": 1,
+        "A": "a[0] XOR a[3]",
+        "B": "b1 XOR b3",
+        "product": "p1"
+      },
+      {
+        "output": "y2",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b0 XOR b1",
+        "product": "p6"
+      },
+      {
+        "output": "y2",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b1",
+        "product": "p7"
+      },
+      {
+        "output": "y3",
+        "mask": 0,
+        "A": "a[0]",
+        "B": "b0 XOR b1 XOR b2 XOR b3",
+        "product": "p0"
+      },
+      {
+        "output": "y3",
+        "mask": 1,
+        "A": "a[0] XOR a[1]",
+        "B": "b0 XOR b2",
+        "product": "p2"
+      },
+      {
+        "output": "y3",
+        "mask": 2,
+        "A": "a[0] XOR a[2]",
+        "B": "b0 XOR b1",
+        "product": "p6"
+      },
+      {
+        "output": "y3",
+        "mask": 3,
+        "A": "a[0] XOR a[1] XOR a[2] XOR a[3]",
+        "B": "b0",
+        "product": "p8"
+      }
+    ],
+    "vector_steps": [
+      {
+        "step": 1,
+        "id": "v01",
+        "op": "xor",
+        "deps": [
+          "b0",
+          "b1"
+        ],
+        "expression": "b0 XOR b1",
+        "value": 200,
+        "slot": 0,
+        "released": [],
+        "live_before": {},
+        "live_after": {
+          "v01": 0
+        },
+        "last_use": 12
+      },
+      {
+        "step": 2,
+        "id": "v23",
+        "op": "xor",
+        "deps": [
+          "b2",
+          "b3"
+        ],
+        "expression": "b2 XOR b3",
+        "value": 22,
+        "slot": 1,
+        "released": [],
+        "live_before": {
+          "v01": 0
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1
+        },
+        "last_use": 9
+      },
+      {
+        "step": 3,
+        "id": "vAll",
+        "op": "xor",
+        "deps": [
+          "v01",
+          "v23"
+        ],
+        "expression": "v01 XOR v23",
+        "value": 222,
+        "slot": 2,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2
+        },
+        "last_use": 6
+      },
+      {
+        "step": 4,
+        "id": "v13",
+        "op": "xor",
+        "deps": [
+          "b1",
+          "b3"
+        ],
+        "expression": "b1 XOR b3",
+        "value": 86,
+        "slot": 3,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3
+        },
+        "last_use": 7
+      },
+      {
+        "step": 5,
+        "id": "v02",
+        "op": "xor",
+        "deps": [
+          "b0",
+          "b2"
+        ],
+        "expression": "b0 XOR b2",
+        "value": 136,
+        "slot": 4,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3,
+          "v02": 4
+        },
+        "last_use": 8
+      },
+      {
+        "step": 6,
+        "id": "p0",
+        "op": "multiply",
+        "deps": [
+          "a[0]",
+          "vAll"
+        ],
+        "expression": "a[0] * vAll",
+        "value": 167,
+        "slot": 2,
+        "released": [
+          "vAll"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "vAll": 2,
+          "v13": 3,
+          "v02": 4
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "v13": 3,
+          "v02": 4,
+          "p0": 2
+        },
+        "last_use": 16
+      },
+      {
+        "step": 7,
+        "id": "p1",
+        "op": "multiply",
+        "deps": [
+          "c2",
+          "v13"
+        ],
+        "expression": "c2 * v13",
+        "value": 86,
+        "slot": 3,
+        "released": [
+          "v13"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "v13": 3,
+          "v02": 4,
+          "p0": 2
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "v02": 4,
+          "p0": 2,
+          "p1": 3
+        },
+        "last_use": 15
+      },
+      {
+        "step": 8,
+        "id": "p2",
+        "op": "multiply",
+        "deps": [
+          "c3",
+          "v02"
+        ],
+        "expression": "c3 * v02",
+        "value": 131,
+        "slot": 4,
+        "released": [
+          "v02"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "v02": 4,
+          "p0": 2,
+          "p1": 3
+        },
+        "live_after": {
+          "v01": 0,
+          "v23": 1,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4
+        },
+        "last_use": 16
+      },
+      {
+        "step": 9,
+        "id": "p3",
+        "op": "multiply",
+        "deps": [
+          "c1",
+          "v23"
+        ],
+        "expression": "c1 * v23",
+        "value": 58,
+        "slot": 1,
+        "released": [
+          "v23"
+        ],
+        "live_before": {
+          "v01": 0,
+          "v23": 1,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1
+        },
+        "last_use": 18
+      },
+      {
+        "step": 10,
+        "id": "p4",
+        "op": "copy",
+        "deps": [
+          "b3"
+        ],
+        "expression": "b3（列 XOR = 1）",
+        "value": 69,
+        "slot": 5,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5
+        },
+        "last_use": 17
+      },
+      {
+        "step": 11,
+        "id": "p5",
+        "op": "copy",
+        "deps": [
+          "b2"
+        ],
+        "expression": "b2（列 XOR = 1）",
+        "value": 83,
+        "slot": 6,
+        "released": [],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5
+        },
+        "live_after": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6
+        },
+        "last_use": 18
+      },
+      {
+        "step": 12,
+        "id": "p6",
+        "op": "multiply",
+        "deps": [
+          "c1",
+          "v01"
+        ],
+        "expression": "c1 * v01",
+        "value": 67,
+        "slot": 0,
+        "released": [
+          "v01"
+        ],
+        "live_before": {
+          "v01": 0,
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0
+        },
+        "last_use": 20
+      },
+      {
+        "step": 13,
+        "id": "p7",
+        "op": "copy",
+        "deps": [
+          "b1"
+        ],
+        "expression": "b1（列 XOR = 1）",
+        "value": 19,
+        "slot": 7,
+        "released": [],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7
+        },
+        "last_use": 19
+      },
+      {
+        "step": 14,
+        "id": "p8",
+        "op": "copy",
+        "deps": [
+          "b0"
+        ],
+        "expression": "b0（列 XOR = 1）",
+        "value": 219,
+        "slot": 8,
+        "released": [],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7
+        },
+        "live_after": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8
+        },
+        "last_use": 20
+      },
+      {
+        "step": 15,
+        "id": "f0",
+        "op": "xor",
+        "deps": [
+          "p0",
+          "p1"
+        ],
+        "expression": "p0 XOR p1",
+        "value": 241,
+        "slot": 3,
+        "released": [
+          "p1"
+        ],
+        "live_before": {
+          "p0": 2,
+          "p1": 3,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8
+        },
+        "live_after": {
+          "p0": 2,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3
+        },
+        "last_use": 23
+      },
+      {
+        "step": 16,
+        "id": "f1",
+        "op": "xor",
+        "deps": [
+          "p0",
+          "p2"
+        ],
+        "expression": "p0 XOR p2",
+        "value": 36,
+        "slot": 2,
+        "released": [
+          "p0",
+          "p2"
+        ],
+        "live_before": {
+          "p0": 2,
+          "p2": 4,
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3
+        },
+        "live_after": {
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2
+        },
+        "last_use": 24
+      },
+      {
+        "step": 17,
+        "id": "g0",
+        "op": "xor",
+        "deps": [
+          "p3",
+          "p4"
+        ],
+        "expression": "p3 XOR p4",
+        "value": 127,
+        "slot": 4,
+        "released": [
+          "p4"
+        ],
+        "live_before": {
+          "p3": 1,
+          "p4": 5,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2
+        },
+        "live_after": {
+          "p3": 1,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4
+        },
+        "last_use": 21
+      },
+      {
+        "step": 18,
+        "id": "g1",
+        "op": "xor",
+        "deps": [
+          "p3",
+          "p5"
+        ],
+        "expression": "p3 XOR p5",
+        "value": 105,
+        "slot": 1,
+        "released": [
+          "p3",
+          "p5"
+        ],
+        "live_before": {
+          "p3": 1,
+          "p5": 6,
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4
+        },
+        "live_after": {
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1
+        },
+        "last_use": 22
+      },
+      {
+        "step": 19,
+        "id": "h0",
+        "op": "xor",
+        "deps": [
+          "p6",
+          "p7"
+        ],
+        "expression": "p6 XOR p7",
+        "value": 80,
+        "slot": 5,
+        "released": [
+          "p7"
+        ],
+        "live_before": {
+          "p6": 0,
+          "p7": 7,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1
+        },
+        "live_after": {
+          "p6": 0,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5
+        },
+        "last_use": 23
+      },
+      {
+        "step": 20,
+        "id": "h1",
+        "op": "xor",
+        "deps": [
+          "p6",
+          "p8"
+        ],
+        "expression": "p6 XOR p8",
+        "value": 152,
+        "slot": 0,
+        "released": [
+          "p6",
+          "p8"
+        ],
+        "live_before": {
+          "p6": 0,
+          "p8": 8,
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0
+        },
+        "last_use": 24
+      },
+      {
+        "step": 21,
+        "id": "y0",
+        "op": "xor",
+        "deps": [
+          "f0",
+          "g0"
+        ],
+        "expression": "f0 XOR g0",
+        "value": 142,
+        "slot": 4,
+        "released": [
+          "g0"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "g0": 4,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 22,
+        "id": "y1",
+        "op": "xor",
+        "deps": [
+          "f1",
+          "g1"
+        ],
+        "expression": "f1 XOR g1",
+        "value": 77,
+        "slot": 1,
+        "released": [
+          "g1"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "g1": 1,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4
+        },
+        "live_after": {
+          "f0": 3,
+          "f1": 2,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 23,
+        "id": "y2",
+        "op": "xor",
+        "deps": [
+          "f0",
+          "h0"
+        ],
+        "expression": "f0 XOR h0",
+        "value": 161,
+        "slot": 3,
+        "released": [
+          "f0",
+          "h0"
+        ],
+        "live_before": {
+          "f0": 3,
+          "f1": 2,
+          "h0": 5,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1
+        },
+        "live_after": {
+          "f1": 2,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1,
+          "y2": 3
+        },
+        "last_use": "保留輸出"
+      },
+      {
+        "step": 24,
+        "id": "y3",
+        "op": "xor",
+        "deps": [
+          "f1",
+          "h1"
+        ],
+        "expression": "f1 XOR h1",
+        "value": 188,
+        "slot": 0,
+        "released": [
+          "f1",
+          "h1"
+        ],
+        "live_before": {
+          "f1": 2,
+          "h1": 0,
+          "y0": 4,
+          "y1": 1,
+          "y2": 3
+        },
+        "live_after": {
+          "y0": 4,
+          "y1": 1,
+          "y2": 3,
+          "y3": 0
+        },
+        "last_use": "保留輸出"
+      }
+    ],
+    "certificate": [
+      {
+        "output": "y0",
+        "surviving_monomials": [
+          "a[0]*b0",
+          "a[1]*b3",
+          "a[2]*b2",
+          "a[3]*b1"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y1",
+        "surviving_monomials": [
+          "a[0]*b1",
+          "a[1]*b0",
+          "a[2]*b3",
+          "a[3]*b2"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y2",
+        "surviving_monomials": [
+          "a[0]*b2",
+          "a[1]*b1",
+          "a[2]*b0",
+          "a[3]*b3"
+        ],
+        "verified": true
+      },
+      {
+        "output": "y3",
+        "surviving_monomials": [
+          "a[0]*b3",
+          "a[1]*b2",
+          "a[2]*b1",
+          "a[3]*b0"
+        ],
+        "verified": true
+      }
+    ],
+    "output": [
+      142,
+      77,
+      161,
+      188
+    ],
+    "expected": [
+      142,
+      77,
+      161,
+      188
+    ],
+    "counts": {
+      "coefficient_xors": 5,
+      "vector_xors": 15,
+      "multiplications": 5,
+      "identity_copies": 4,
+      "retained_coefficients": 5,
+      "peak_slots": 9,
+      "schedule_steps": 24
+    }
+  }
+]

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4×4 PARAMS 對照與逐步執行</title>
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f6f8fb,#111720);--fg:light-dark(#172337,#e7edf7);--muted:light-dark(#4a5c70,#b4c2d3);--card:light-dark(#fff,#1b2635);--border:light-dark(#d7e0eb,#42516a);--active:light-dark(#dceafe,#29476d)}
+*{box-sizing:border-box}body{max-width:1120px;margin:32px auto;padding:0 22px;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,sans-serif}h1{font-size:30px;line-height:1.3}h2{font-size:21px;margin-top:30px}h3{font-size:17px}p{color:var(--muted)}button,select,input{font:inherit}button,select{padding:7px 13px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--fg)}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}input[type=range]{flex:1;min-width:100px}label{font-weight:600}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.panel{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px}.mono,code,pre{font-family:ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums}pre{margin:0;white-space:pre-wrap}#slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.slot{min-height:86px;border:1px solid var(--border);border-radius:6px;padding:9px;background:var(--card);overflow-wrap:anywhere}.slot.active{background:var(--active)}.slot small{display:block;color:var(--muted)}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}th,td{padding:9px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top;overflow-wrap:anywhere}th{white-space:nowrap}.current{background:var(--active)}summary{font-weight:600;cursor:pointer;margin:18px 0 10px}.tag{display:inline-block;margin:3px;padding:3px 8px;background:var(--active);border-radius:5px}a{color:inherit}#operation{font-size:20px;font-weight:600;min-height:36px}#liveInfo{min-height:30px}.small{font-size:14px}@media(max-width:500px){body{padding:0 12px}h1{font-size:25px}.slot{font-size:13px}#slots{gap:5px}}
+</style>
+<main id="audit4">
+<h1>4×4 一般解 → PARAMS 執行對照</h1>
+<p>依論文集合公式建立的可稽核排程。所有加法是 XOR，數值以十六進位顯示。這是重新實作的設計模型，尚未宣稱與遺失的原始程式相同或具最優效能。</p>
+<div class="controls"><label for="case">矩陣案例</label><select id="case"><option value="0">一般 Toeplitz</option><option value="1">一般 circulant</option><option value="2">列 XOR = 1 的 circulant</option></select></div>
+<div class="grid" style="margin-top:16px"><section class="panel"><h3>輸入矩陣與向量</h3><pre id="inputs"></pre></section><section class="panel"><h3>驗證結果與運算口徑</h3><div id="counts"></div><pre id="outputs"></pre></section></div>
+<h2>三階段預計算</h2>
+<ol><li>尺寸／類型固定：符號索引、相依關係、最後使用時點。</li><li>矩陣固定：係數組合；不同向量共用。</li><li>向量改變：中間和、乘積與輸出都重新計算。</li></ol>
+<details><summary>查看矩陣係數的預計算與釋放時點</summary><div class="table-scroll"><table id="coefficients"></table></div></details>
+<h2>每個新向量：逐步執行</h2>
+<p class="small">係數已準備。峰值 9 個 field-value slots，另有 1 個暫存 scalar result；不含 inputs、係數、排程、索引與語言物件開銷。這不是實際 process memory，也不是最小空間證明。</p>
+<div id="persistent"></div>
+<div class="controls" style="margin:16px 0"><button id="previous" type="button">上一步</button><label for="step" id="stepLabel">步驟 0 / 24</label><input id="step" type="range" min="0" max="24" value="0"><button id="next" type="button">下一步</button></div>
+<div aria-live="polite"><div id="operation" class="mono"></div><div id="liveInfo"></div></div>
+<div id="slots" aria-label="可重用的九個儲存位置"></div>
+<div class="table-scroll"><table id="trace"></table></div>
+<details><summary>9 個共用乘積，以及各輸出的使用關係</summary><div class="table-scroll"><table id="products"></table></div></details>
+<details><summary>一般解的 16 個項如何對應到 9 個乘積</summary><div class="table-scroll"><table id="formula"></table></div></details>
+<details><summary>符號證明與數值驗證</summary><div id="certificate"></div><p>一般解與排程的乘積均展開為 a·b monomials，XOR 消去後與傳統矩陣列完全相同。另以獨立多項式乘法 oracle 驗證數值，並對 150 組隨機輸入重播九格儲存排程。</p><p>unit 案例的符號證明先保留一般乘法形式，再以已驗證的列 XOR = 1 條件將四個乘法換成 copy。</p></details>
+<p><a href="README.md">完整公式、排程與限制</a> · <a href="trace.json">可機讀的 trace</a></p>
+</main>
+<script>
+const cases=__AUDIT_JSON__;
+const root=document.getElementById('audit4'), by=id=>root.querySelector('#'+id);
+const hex=v=>v.toString(16).toUpperCase().padStart(2,'0');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function table(id,headers,rows){by(id).innerHTML='<thead><tr>'+headers.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</tbody>'}
+function draw(){
+ const c=cases[Number(by('case').value)], n=Number(by('step').value),s=c.vector_steps[n-1], count=c.counts;
+ by('stepLabel').textContent=`步驟 ${n} / ${c.vector_steps.length}`;
+ by('previous').disabled=n===0;by('next').disabled=n===c.vector_steps.length;
+ by('operation').textContent=s?`${s.id} = ${s.expression} = ${hex(s.value)}`:'尚未開始：只有輸入與係數已準備';
+ by('liveInfo').textContent=s?`寫入 slot ${s.slot}；讀取後釋放：${s.released.join(', ')||'無'}；步驟後存活 ${Object.keys(s.live_after).length} / ${count.peak_slots}`:'所有 workspace slots 為空';
+ const live=s?s.live_after:{}, values=Object.fromEntries(c.vector_steps.slice(0,n).map(s=>[s.id,s.value]));
+ by('slots').innerHTML=Array.from({length:9},(_,i)=>{const name=Object.keys(live).find(k=>live[k]===i);return `<div class="slot ${s&&s.slot===i?'active':''}"><small>slot ${i}</small><div class="mono">${name?esc(name)+' = '+hex(values[name]):'空'}</div></div>`}).join('');
+ const rows=[...by('trace').querySelectorAll('tbody tr')];rows.forEach((r,i)=>r.classList.toggle('current',i===n-1));
+}
+function changeCase(){
+ const c=cases[Number(by('case').value)],q=c.counts;
+ by('inputs').textContent=c.matrix.map(r=>r.map(hex).join('  ')).join('\n')+'\n\nb = '+c.vector.map(hex).join(' ');
+ by('counts').textContent=`係數預計算：${q.coefficient_xors} XOR；每個向量：${q.vector_xors} XOR、${q.multiplications} 乘法、${q.identity_copies} copy。`+(c.kind==='unit-circulant'?' 列 XOR 條件驗證另需 3 XOR。':'');
+ by('outputs').textContent='\n預期輸出 = '+c.output.map(hex).join(' ')+'\n符號與數值檢查：通過';
+ by('persistent').innerHTML='<span>同一矩陣保留：</span>'+c.persistent_coefficients.map(v=>`<span class="tag mono">${esc(v.id)} = ${hex(v.value)}</span>`).join('');
+ table('coefficients',['步驟','變數','計算／展開','值','最後使用'],c.matrix_steps.map(s=>[s.step,s.id,s.expression+' = '+s.expanded,hex(s.value),s.last_use]));
+ table('products',['乘積','係數','向量','輸出使用者'],c.products.map(p=>[p.id,p.coefficient_expanded,p.vector_expanded,p.outputs.join(', ')]));
+ table('formula',['輸出','mask','係數集合','向量集合','共用乘積'],c.formula_terms.map(t=>[t.output,t.mask,t.A,t.B,t.product]));
+ table('trace',['步驟','變數','計算','值','slot','讀取後釋放','最後使用'],c.vector_steps.map(s=>[s.step,s.id,s.expression,hex(s.value),s.slot,s.released.join(', ')||'—',s.last_use]));
+ by('certificate').innerHTML=c.certificate.map(t=>'<p class="mono">'+esc(t.output+' = '+t.surviving_monomials.join(' XOR '))+'</p>').join('');
+ by('step').max=c.vector_steps.length;by('step').value='0';draw();
+}
+by('case').addEventListener('change',changeCase);by('step').addEventListener('input',draw);
+by('previous').addEventListener('click',()=>{by('step').value=Number(by('step').value)-1;draw()});
+by('next').addEventListener('click',()=>{by('step').value=Number(by('step').value)+1;draw()});changeCase();
+</script>
+</html>
